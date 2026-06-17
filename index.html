@@ -113,7 +113,7 @@
             gap: 10px;
         }
 
-        /* PHẦN 1: FLASHCARD STYLES */
+        /* FLASHCARD STYLES */
         .flashcard-wrapper {
             perspective: 1000px;
             width: 100%;
@@ -149,60 +149,25 @@
             border: 2px solid #e2e8f0;
         }
 
-        .card-front {
-            background-color: white;
-        }
+        .card-front { background-color: white; }
+        .card-back { background-color: #f8fafc; transform: rotateY(180deg); border-color: var(--primary); }
 
-        .card-back {
-            background-color: #f8fafc;
-            transform: rotateY(180deg);
-            border-color: var(--primary);
-        }
-
-        .word-text { font-size: 36px; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+        .word-text { font-size: 34px; font-weight: 700; color: var(--primary); margin-bottom: 5px; text-align: center; }
         .word-type { font-style: italic; color: var(--gray); margin-bottom: 15px; font-size: 15px; }
         .meaning-text { font-size: 24px; font-weight: 600; color: #0f172a; text-align: center; margin-bottom: 15px; }
         .example-text { font-size: 14px; color: var(--gray); text-align: center; max-width: 90%; line-height: 1.5; }
 
         .audio-btn {
-            background-color: #e0e7ff;
-            color: var(--primary);
-            border: none;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            transition: all 0.2s;
+            background-color: #e0e7ff; color: var(--primary); border: none; width: 45px; height: 45px;
+            border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 16px; transition: all 0.2s;
         }
         .audio-btn:hover { transform: scale(1.1); background-color: var(--primary); color: white; }
 
-        .hint-click {
-            position: absolute;
-            bottom: 15px;
-            font-size: 12px;
-            color: #94a3b8;
-        }
+        .hint-click { position: absolute; bottom: 15px; font-size: 12px; color: #94a3b8; }
+        .controls { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
 
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 15px;
-        }
+        .btn { padding: 12px 24px; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-size: 15px; }
         .btn-secondary { background-color: #e2e8f0; color: var(--dark); }
         .btn-secondary:hover { background-color: #cbd5e1; }
         .btn-primary { background-color: var(--primary); color: white; }
@@ -210,81 +175,30 @@
 
         .progress-text { font-size: 14px; color: var(--gray); font-weight: 500; }
 
-        /* PHẦN 2: BÀI TẬP (QUIZ) STYLES */
-        .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .level-badge {
-            background-color: var(--accent);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
+        /* QUIZ STYLES */
+        .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
+        .level-badge { color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .lvl-easy { background-color: var(--secondary); }
+        .lvl-medium { background-color: var(--accent); }
+        .lvl-hard { background-color: var(--danger); }
         .question-box { font-size: 18px; font-weight: 600; margin-bottom: 20px; line-height: 1.5; }
         .options-list { display: flex; flex-direction: column; gap: 12px; }
-        .option-item {
-            padding: 14px 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.2s;
-            text-align: left;
-            background: white;
-        }
+        .option-item { padding: 14px 20px; border: 2px solid #e2e8f0; border-radius: 12px; cursor: pointer; font-weight: 500; transition: all 0.2s; text-align: left; background: white; }
         .option-item:hover { border-color: var(--primary); background-color: #f5f3ff; }
         
-        /* Kết quả Quiz */
         .correct { background-color: #ecfdf5 !important; border-color: var(--secondary) !important; color: #065f46; }
         .wrong { background-color: #fef2f2 !important; border-color: var(--danger) !important; color: #991b1b; }
-        
         .score-container { text-align: center; padding: 20px 0; }
         .score-num { font-size: 48px; font-weight: 700; color: var(--primary); margin: 15px 0; }
 
-        /* PHẦN 3: GAME GHÉP TỪ STYLES */
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 20px;
-        }
-        .game-card {
-            background-color: white;
-            border: 2px solid #e2e8f0;
-            padding: 20px 10px;
-            text-align: center;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: all 0.2s;
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-        }
+        /* GAME STYLES */
+        .game-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+        .game-card { background-color: white; border: 2px solid #e2e8f0; padding: 15px 10px; text-align: center; border-radius: 12px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s; min-height: 65px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
         .game-card:hover { border-color: var(--primary); transform: translateY(-2px); }
         .game-card.selected { background-color: #e0e7ff; border-color: var(--primary); color: var(--primary); }
         .game-card.matched { background-color: #d1fae5; border-color: var(--secondary); color: var(--secondary); visibility: hidden; opacity: 0; }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: var(--gray);
-            font-size: 12px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+        footer { text-align: center; padding: 20px; color: var(--gray); font-size: 12px; position: fixed; bottom: 0; width: 100%; background: #f0f2f5; }
     </style>
 </head>
 <body>
@@ -307,7 +221,6 @@
     </div>
 
     <div class="container">
-        
         <div id="flashcard-panel" class="panel active">
             <h2><i class="fa-solid fa-star" style="color:var(--accent)"></i> Học Qua Flashcard</h2>
             <div class="flashcard-wrapper">
@@ -337,12 +250,11 @@
         <div id="quiz-panel" class="panel">
             <div id="quiz-gameplay">
                 <div class="quiz-header">
-                    <span class="progress-text" id="quiz-progress">Câu 1/5</span>
-                    <span class="level-badge" id="quiz-level">Dễ: Chọn nghĩa</span>
+                    <span class="progress-text" id="quiz-progress">Câu 1/10</span>
+                    <span class="level-badge" id="quiz-level">Cấp độ</span>
                 </div>
                 <div class="question-box" id="quiz-question">Đang tải câu hỏi...</div>
-                <div class="options-list" id="quiz-options">
-                    </div>
+                <div class="options-list" id="quiz-options"></div>
             </div>
             
             <div id="quiz-result" style="display: none;" class="score-container">
@@ -355,17 +267,13 @@
 
         <div id="game-panel" class="panel">
             <h2><i class="fa-solid fa-bolt" style="color:var(--accent)"></i> Game Trí Nhớ: Ghép Cặp</h2>
-            <p style="text-align: center; color: var(--gray); font-size: 14px; margin-bottom: 15px;">Chọn 1 từ tiếng Anh và Nghĩa tiếng Việt tương ứng để triệt tiêu chúng!</p>
-            
-            <div class="game-grid" id="game-grid">
-                </div>
-
+            <p style="text-align: center; color: var(--gray); font-size: 14px; margin-bottom: 15px;">Chọn từ tiếng Anh và Nghĩa tiếng Việt tương ứng để làm biến mất chúng!</p>
+            <div class="game-grid" id="game-grid"></div>
             <div id="game-success" style="display: none; text-align: center; margin-top: 20px;">
                 <p style="color: var(--secondary); font-weight: 600; margin-bottom: 15px;"><i class="fa-solid fa-circle-check"></i> Tuyệt vời! Bạn đã hoàn thành xuất sắc trò chơi.</p>
                 <button class="btn btn-primary" onclick="initMatchingGame()"><i class="fa-solid fa-play"></i> Chơi Lượt Mới</button>
             </div>
         </div>
-
     </div>
 
     <footer>
@@ -373,8 +281,9 @@
     </footer>
 
     <script>
-        // DỮ LIỆU TỪ VỰNG MẪU chuẩn Cambridge B1 Preliminary (PET) lấy trực tiếp từ file tài liệu
+        // DANH SÁCH TỪ VỰNG ĐƯỢC TRÍCH XUẤT PHONG PHÚ TỪ FILE TÀI LIỆU (CHỦ ĐỀ ĐA DẠNG)
         const vocabularyData = [
+            // Chủ đề: Kỹ năng & Trí tuệ (Ability, Accurate, Advanced...)
             { word: "Ability", type: "noun", meaning: "Khả năng, năng lực", example: "He has the ability to pass the B1 examination." },
             { word: "Absolute", type: "adjective", meaning: "Tuyệt đối, hoàn toàn", example: "The movie was absolutely awful." },
             { word: "Accept", type: "verb", meaning: "Chấp nhận, nhận lời", example: "Are you going to accept the job offer?" },
@@ -384,33 +293,45 @@
             { word: "Adventure", type: "noun", meaning: "Cuộc phiêu lưu, mạo hiểm", example: "This book is about famous explorers and their adventures." },
             { word: "Afford", type: "verb", meaning: "Có đủ khả năng chi trả", example: "We can't afford to go on holiday this year." },
             { word: "Apologise", type: "verb", meaning: "Xin lỗi (vì lỗi lầm)", example: "You must apologise for your bad behaviour." },
-            { word: "Attractive", type: "adjective", meaning: "Hấp dẫn, lôi cuốn", example: "The hotel has many attractive features for tourists." }
+            { word: "Attractive", type: "adjective", meaning: "Hấp dẫn, lôi cuốn", example: "The hotel has many attractive features for tourists." },
+            
+            // Chủ đề: Nghề nghiệp & Công việc (Cơ bản - Nâng cao từ trang cuối tài liệu)
+            { word: "Businessman", type: "noun", meaning: "Nam doanh nhân", example: "The successful businessman owns three large factories." },
+            { word: "Candidate", type: "noun", meaning: "Ứng viên, thí sinh", example: "Each candidate has 15 minutes for the speaking test." },
+            { word: "Colleague", type: "noun", meaning: "Đồng nghiệp", example: "Fiona is a helpful colleague in our marketing team." },
+            { word: "Conference", type: "noun", meaning: "Hội nghị, cuộc thảo luận lớn", example: "The international science conference starts next Tuesday." },
+            { word: "Contract", type: "noun", meaning: "Hợp đồng, khế ước", example: "Make sure you read the contract before signing it." },
+            { word: "Employee", type: "noun", meaning: "Người lao động, nhân viên", example: "The company has more than 500 employees." },
+            { word: "Employer", type: "noun", meaning: "Người tuyển dụng, chủ doanh nghiệp", example: "An employer should treat workers fairly." },
+            { word: "Employment", type: "noun", meaning: "Việc làm, sự thuê mướn", example: "She is looking for full-time employment in London." },
+            { word: "Instructor", type: "noun", meaning: "Người hướng dẫn, huấn luyện viên", example: "Follow the instructions given by your driving instructor." },
+            { word: "Journalist", type: "noun", meaning: "Nhà báo, phóng viên", example: "The journalist asked the politician some difficult questions." },
+            { word: "Laboratory", type: "noun", meaning: "Phòng thí nghiệm", example: "Scientists work inside a laboratory to test new medicines." },
+            { word: "Lecturer", type: "noun", meaning: "Giảng viên đại học", example: "The university lecturer gave an interesting talk on history." },
+            { word: "Occupation", type: "noun", meaning: "Nghề nghiệp, công việc chính", example: "Please write your name, age and occupation on this form." },
+            { word: "Qualification", type: "noun", meaning: "Bằng cấp, trình độ chuyên môn", example: "Good computer skills are an essential qualification for this job." },
+            { word: "Unemployed", type: "adjective", meaning: "Thất nghiệp", example: "He has been unemployed for six months and is looking for work." }
         ];
 
-        // Trạng thái ứng dụng
         let currentCardIndex = 0;
         let currentQuizIndex = 0;
         let quizScore = 0;
         let selectedGameCards = [];
         let generatedQuestions = [];
 
-        // Chuyển Đổi Các Tab
         function switchTab(tabName) {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-            
             event.currentTarget.classList.add('active');
             document.getElementById(`${tabName}-panel`).classList.add('active');
-
             if(tabName === 'quiz') restartQuiz();
             if(tabName === 'game') initMatchingGame();
         }
 
-        // --- CODE XỬ LÝ FLASHCARD ---
+        // --- FLASHCARD ---
         function updateCard() {
             const card = document.getElementById('card');
-            card.classList.remove('flipped'); // Reset mặt trước khi đổi từ
-            
+            card.classList.remove('flipped');
             setTimeout(() => {
                 const item = vocabularyData[currentCardIndex];
                 document.getElementById('front-word').innerText = item.word;
@@ -421,86 +342,73 @@
             }, 150);
         }
 
-        function toggleFlip() {
-            document.getElementById('card').classList.toggle('flipped');
-        }
+        function toggleFlip() { document.getElementById('card').classList.toggle('flipped'); }
+        function nextCard() { currentCardIndex = (currentCardIndex + 1) % vocabularyData.length; updateCard(); }
+        function prevCard() { currentCardIndex = (currentCardIndex - 1 + vocabularyData.length) % vocabularyData.length; updateCard(); }
 
-        function nextCard() {
-            currentCardIndex = (currentCardIndex + 1) % vocabularyData.length;
-            updateCard();
-        }
-
-        function prevCard() {
-            currentCardIndex = (currentCardIndex - 1 + vocabularyData.length) % vocabularyData.length;
-            updateCard();
-        }
-
-        // Tích hợp phát âm chuẩn Cambridge qua API của Trình duyệt (SpeechSynthesis)
         function playPronunciation(e) {
-            e.stopPropagation(); // Ngăn chặn lật thẻ khi bấm nút loa
+            e.stopPropagation();
             const word = vocabularyData[currentCardIndex].word;
             const utterance = new SpeechSynthesisUtterance(word);
-            utterance.lang = 'en-UK'; // Giọng Anh - Anh chuẩn Cambridge
-            utterance.rate = 0.85;    // Phát âm rõ ràng, vừa phải cho học sinh
+            utterance.lang = 'en-UK';
+            utterance.rate = 0.85;
             window.speechSynthesis.speak(utterance);
         }
 
-
-        // --- CODE XỬ LÝ BÀI TẬP (QUIZ TỪ DỄ ĐẾN KHÓ) ---
+        // --- BÀI TẬP TỪ DỄ ĐẾN KHÓ (XÂY DỰNG 10 CÂU HỎI NGẪU NHIÊN) ---
         function generateQuizQuestions() {
             generatedQuestions = [];
+            // Lấy ngẫu nhiên các từ khác nhau để tạo bài kiểm tra phong phú
+            let shuffledVocab = [...vocabularyData].sort(() => 0.5 - Math.random());
             
-            // Câu 1-2: Cấp độ DỄ (Nhìn từ tiếng Anh chọn nghĩa Tiếng Việt)
-            for(let i=0; i<2; i++) {
-                let target = vocabularyData[i];
+            // 4 Câu Dễ: Nhìn từ chọn nghĩa Tiếng Việt
+            for(let i=0; i<4; i++) {
+                let target = shuffledVocab[i];
                 let wrongs = vocabularyData.filter(v => v.word !== target.word).sort(() => 0.5 - Math.random()).slice(0, 3);
                 let options = [target.meaning, wrongs[0].meaning, wrongs[1].meaning, wrongs[2].meaning].sort(() => 0.5 - Math.random());
                 generatedQuestions.push({
-                    level: "Dễ: Đi tìm nghĩa của từ",
-                    question: `Từ "${target.word}" mang ý nghĩa nào sau đây?`,
-                    correctAnswer: target.meaning,
-                    options: options
+                    level: "Dễ: Nghĩa của từ", badgeClass: "lvl-easy",
+                    question: `Từ tiếng Anh <b>"${target.word}"</b> mang ý nghĩa nào sau đây?`,
+                    correctAnswer: target.meaning, options: options
                 });
             }
 
-            // Câu 3-4: Cấp độ TRUNG BÌNH (Nhìn nghĩa Tiếng Việt đoán từ Tiếng Anh)
-            for(let i=2; i<4; i++) {
-                let target = vocabularyData[i];
+            // 4 Câu Trung Bình: Nhìn nghĩa Tiếng Việt đoán từ Tiếng Anh
+            for(let i=4; i<8; i++) {
+                let target = shuffledVocab[i];
                 let wrongs = vocabularyData.filter(v => v.word !== target.word).sort(() => 0.5 - Math.random()).slice(0, 3);
                 let options = [target.word, wrongs[0].word, wrongs[1].word, wrongs[2].word].sort(() => 0.5 - Math.random());
                 generatedQuestions.push({
-                    level: "Trung bình: Tìm từ tiếng Anh tương ứng",
-                    question: `Từ tiếng Anh nào có nghĩa là: "${target.meaning}"?`,
-                    correctAnswer: target.word,
-                    options: options
+                    level: "Trung bình: Đi tìm từ", badgeClass: "lvl-medium",
+                    question: `Từ tiếng Anh nào có ý nghĩa là: <b>"${target.meaning}"</b>?`,
+                    correctAnswer: target.word, options: options
                 });
             }
 
-            // Câu 5: Cấp độ NÂNG CAO (Điền vào chỗ trống trong câu ví dụ)
-            let targetAdv = vocabularyData[4];
-            let blankedExample = targetAdv.example.replace(new RegExp(targetAdv.word, 'gi'), "_______");
-            let wrongsAdv = vocabularyData.filter(v => v.word !== targetAdv.word).sort(() => 0.5 - Math.random()).slice(0, 3);
-            let optionsAdv = [targetAdv.word, wrongsAdv[0].word, wrongsAdv[1].word, wrongsAdv[2].word].sort(() => 0.5 - Math.random());
-            generatedQuestions.push({
-                level: "Nâng cao: Hoàn thành câu ngữ cảnh",
-                question: `Chọn từ thích hợp điền vào chỗ trống: <br><i>"${blankedExample}"</i>`,
-                correctAnswer: targetAdv.word,
-                options: optionsAdv
-            });
+            // 2 Câu Khó: Điền từ vào ngữ cảnh câu ví dụ
+            for(let i=8; i<10; i++) {
+                let target = shuffledVocab[i];
+                let blankedExample = target.example.replace(new RegExp(target.word, 'gi'), "_______");
+                let wrongs = vocabularyData.filter(v => v.word !== target.word).sort(() => 0.5 - Math.random()).slice(0, 3);
+                let options = [target.word, wrongs[0].word, wrongs[1].word, wrongs[2].word].sort(() => 0.5 - Math.random());
+                generatedQuestions.push({
+                    level: "Nâng cao: Điền vào ngữ cảnh câu", badgeClass: "lvl-hard",
+                    question: `Hãy chọn từ đúng nhất điền vào chỗ trống:<br><i>"${blankedExample}"</i>`,
+                    correctAnswer: target.word, options: options
+                });
+            }
         }
 
         function showQuiz() {
             if (currentQuizIndex >= generatedQuestions.length) {
-                // Hiển thị bảng điểm hoàn thành bài test
                 document.getElementById('quiz-gameplay').style.display = 'none';
                 document.getElementById('quiz-result').style.display = 'block';
-                
                 let finalScore = Math.round((quizScore / generatedQuestions.length) * 100);
                 document.getElementById('score-text').innerText = `${finalScore} / 100 Điểm`;
                 
-                let fb = "Cần cố gắng học thêm flashcard nhé học sinh!";
-                if(finalScore >= 80) fb = "Tuyệt vời! Con đã nắm rất chắc các từ vựng này.";
-                else if(finalScore >= 50) fb = "Khá tốt, hãy rèn luyện thêm một chút nữa nhé.";
+                let fb = "Học sinh cần xem lại kĩ các thẻ Flashcard để đạt điểm cao hơn!";
+                if(finalScore >= 90) fb = "Xuất sắc! Con có một vốn từ vựng chuẩn B1 tuyệt vời.";
+                else if(finalScore >= 60) fb = "Khá tốt! Hãy cố gắng luyện tập thêm để ghi nhớ sâu nhé.";
                 document.getElementById('score-feedback').innerText = fb;
                 return;
             }
@@ -510,12 +418,15 @@
 
             let q = generatedQuestions[currentQuizIndex];
             document.getElementById('quiz-progress').innerText = `Câu ${currentQuizIndex + 1}/${generatedQuestions.length}`;
-            document.getElementById('quiz-level').innerText = q.level;
+            
+            let badge = document.getElementById('quiz-level');
+            badge.innerText = q.level;
+            badge.className = `level-badge ${q.badgeClass}`;
+            
             document.getElementById('quiz-question').innerHTML = q.question;
 
             let optionsDiv = document.getElementById('quiz-options');
             optionsDiv.innerHTML = '';
-            
             q.options.forEach(opt => {
                 let btn = document.createElement('button');
                 btn.className = 'option-item';
@@ -526,7 +437,6 @@
         }
 
         function checkQuizAnswer(btnElement, selectedOpt, correctOpt) {
-            // Ngăn chặn bấm nhiều lần trong 1 câu hỏi
             let items = document.querySelectorAll('.option-item');
             items.forEach(el => el.style.pointerEvents = 'none');
 
@@ -535,43 +445,31 @@
                 quizScore++;
             } else {
                 btnElement.classList.add('wrong');
-                // Hiển thị đáp án đúng cho học sinh học hỏi
-                items.forEach(el => {
-                    if(el.innerText === correctOpt) el.classList.add('correct');
-                });
+                items.forEach(el => { if(el.innerText === correctOpt) el.classList.add('correct'); });
             }
 
             setTimeout(() => {
                 currentQuizIndex++;
                 showQuiz();
-            }, 1500); // 1.5 giây để học sinh xem đáp án đúng/sai rồi tự động qua câu tiếp theo
+            }, 1400);
         }
 
-        function restartQuiz() {
-            currentQuizIndex = 0;
-            quizScore = 0;
-            generateQuizQuestions();
-            showQuiz();
-        }
+        function restartQuiz() { currentQuizIndex = 0; quizScore = 0; generateQuizQuestions(); showQuiz(); }
 
-
-        // --- CODE XỬ LÝ GAME GHÉP CẶP (MATCHING GAME) ---
+        // --- GAME GHÉP TỪ ---
         function initMatchingGame() {
             document.getElementById('game-success').style.display = 'none';
             const grid = document.getElementById('game-grid');
             grid.innerHTML = '';
             selectedGameCards = [];
 
-            // Chọn ngẫu nhiên 5 từ để chơi game ghép cặp
-            let subData = vocabularyData.sort(() => 0.5 - Math.random()).slice(0, 5);
-            
+            // Lấy ngẫu nhiên 5 cặp từ bất kỳ trong kho dữ liệu phong phú để chơi game
+            let subData = [...vocabularyData].sort(() => 0.5 - Math.random()).slice(0, 5);
             let pool = [];
             subData.forEach(item => {
-                pool.push({ text: item.word, matchId: item.word, type: 'en' });
-                pool.push({ text: item.meaning, matchId: item.word, type: 'vi' });
+                pool.push({ text: item.word, matchId: item.word });
+                pool.push({ text: item.meaning, matchId: item.word });
             });
-
-            // Xáo trộn vị trí các mảnh ghép tiếng Anh và tiếng Việt lộn xộn
             pool.sort(() => 0.5 - Math.random());
 
             pool.forEach(cardData => {
@@ -586,7 +484,6 @@
 
         function selectGameCard(cardElement) {
             if (cardElement.classList.contains('matched') || cardElement.classList.contains('selected')) return;
-
             cardElement.classList.add('selected');
             selectedGameCards.push(cardElement);
 
@@ -595,26 +492,21 @@
                 let card2 = selectedGameCards[1];
 
                 if (card1.dataset.matchId === card2.dataset.matchId && card1.innerText !== card2.innerText) {
-                    // Ghép cặp chính xác thành công
                     setTimeout(() => {
-                        card1.classList.remove('selected');
-                        card2.classList.remove('selected');
-                        card1.classList.add('matched');
-                        card2.classList.add('matched');
+                        card1.className = 'game-card matched';
+                        card2.className = 'game-card matched';
                         checkGameWin();
-                    }, 300);
+                    }, 250);
                 } else {
-                    // Chọn sai cặp từ -> Tự động nhấp nháy đỏ và hoàn tác chọn
                     setTimeout(() => {
                         card1.style.borderColor = 'var(--danger)';
                         card2.style.borderColor = 'var(--danger)';
                         setTimeout(() => {
                             card1.classList.remove('selected');
                             card2.classList.remove('selected');
-                            card1.style.borderColor = '';
-                            card2.style.borderColor = '';
+                            card1.style.borderColor = ''; card2.style.borderColor = '';
                         }, 400);
-                    }, 200);
+                    }, 150);
                 }
                 selectedGameCards = [];
             }
@@ -628,10 +520,7 @@
             }
         }
 
-        // Khởi động dữ liệu lần đầu tiên khi tải trang web
-        window.onload = () => {
-            updateCard();
-        };
+        window.onload = () => { updateCard(); };
     </script>
 </body>
 </html>
