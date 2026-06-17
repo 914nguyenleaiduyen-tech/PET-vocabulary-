@@ -1,134 +1,701 @@
-const lessons = {
-    // PHẦN 1: TỪ VỰNG CHIA THEO BẢNG CHỮ CÁI (ALPHABET)
-    alphabet: {
-        "A": [
-            { word: "a/an", type: "det", example: "" }, //
-            { word: "ability", type: "n", example: "" }, //
-            { word: "able", type: "adj", example: "be able to" }, //[cite: 1]
-            { word: "about", type: "adv & prep", example: "about 500 students (adv) / The film is about a small boy. (prep)" }, //[cite: 1]
-            { word: "above", type: "adj, adv & prep", example: "" }, //[cite: 1]
-            { word: "abroad", type: "adv", example: "" }, //[cite: 1]
-            { word: "absent", type: "adj", example: "" }, //[cite: 1]
-            { word: "absolutely", type: "adv", example: "The movie was absolutely awful." }, //[cite: 1]
-            { word: "accent", type: "n", example: "She has a beautiful French accent." }, //[cite: 1]
-            { word: "accept", type: "v", example: "" }, //[cite: 1]
-            { word: "acceptable", type: "adj", example: "" }, //[cite: 1]
-            { word: "access", type: "n", example: "disabled access / internet access / easy access to the city centre" }, //[cite: 1]
-            { word: "accident", type: "n", example: "" }, //[cite: 1]
-            { word: "accommodation", type: "n", example: "" }, //[cite: 1]
-            { word: "accompany", type: "v", example: "" }, //[cite: 1]
-            { word: "according to", type: "prep phr", example: "" }, //[cite: 1]
-            { word: "account", type: "n", example: "" }, //[cite: 1]
-            { word: "accountant", type: "n", example: "" }, //[cite: 1]
-            { word: "accurate", type: "adj", example: "" }, //[cite: 1]
-            { word: "ache", type: "n", example: "" }, //[cite: 1]
-            { word: "achieve", type: "v", example: "" }, //[cite: 1]
-            { word: "achievement", type: "n", example: "" }, //[cite: 1]
-            { word: "across", type: "adv & prep", example: "" }, //[cite: 1]
-            { word: "act", type: "n & v", example: "in the second act (of the play) (n) / to act in a play (v) / Stop acting like a child. (v)" }, //[cite: 1]
-            { word: "action", type: "n", example: "" }, //[cite: 1]
-            { word: "active", type: "adj", example: "" }, //[cite: 1]
-            { word: "activity", type: "n", example: "" }, //[cite: 1]
-            { word: "actor", type: "n", example: "" }, //[cite: 1]
-            { word: "actress", type: "n", example: "" }, //[cite: 1]
-            { word: "actually", type: "adv", example: "She seems a bit strict at first, but she’s actually very nice. / Are you actually going to take the job?" } //[cite: 1]
-        ],
-        "B": [
-            { word: "baby", type: "n", example: "" }, //[cite: 1]
-            { word: "babysit", type: "v", example: "" }, //[cite: 1]
-            { word: "babysitter", type: "n", example: "" }, //[cite: 1]
-            { word: "back", type: "adv, adj & n", example: "" }, //[cite: 1]
-            { word: "background", type: "n", example: "background (experience)" }, //[cite: 1]
-            { word: "backpack", type: "n", example: "" }, //[cite: 1]
-            { word: "backpacker", type: "n", example: "" }, //[cite: 1]
-            { word: "backpacking", type: "n", example: "" }, //[cite: 1]
-            { word: "backwards", type: "adv", example: "" }, //[cite: 1]
-            { word: "bad", type: "adj", example: "" }, //[cite: 1]
-            { word: "badly", type: "adv", example: "" }, //[cite: 1]
-            { word: "badminton", type: "n", example: "" }, //[cite: 1]
-            { word: "bag", type: "n", example: "" }, //[cite: 1]
-            { word: "baggage", type: "n", example: "" }, //[cite: 1]
-            { word: "bake", type: "v", example: "" }, //[cite: 1]
-            { word: "baker", type: "n", example: "" }, //[cite: 1]
-            { word: "balcony", type: "n", example: "" } //[cite: 1]
-        ]
-    },
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET Cambridge Vocabulary Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
 
-    // PHẦN 2: TỪ VỰNG CHIA THEO CHỦ ĐỀ (TOPICS)
-    topics: {
-        "Clothes and Accessories": [
-            { word: "backpack", type: "", example: "" }, //[cite: 1]
-            { word: "bag", type: "", example: "" }, //[cite: 1]
-            { word: "belt", type: "", example: "" }, //[cite: 1]
-            { word: "blouse", type: "", example: "" }, //[cite: 1]
-            { word: "boot", type: "", example: "" }, //[cite: 1]
-            { word: "bracelet", type: "", example: "" }, //[cite: 1]
-            { word: "button", type: "", example: "" }, //[cite: 1]
-            { word: "cap", type: "", example: "" }, //[cite: 1]
-            { word: "chain", type: "", example: "" }, //[cite: 1]
-            { word: "clothes", type: "", example: "" }, //[cite: 1]
-            { word: "coat", type: "", example: "" }, //[cite: 1]
-            { word: "collar", type: "", example: "" }, //[cite: 1]
-            { word: "cotton", type: "", example: "" }, //[cite: 1]
-            { word: "clothing", type: "", example: "" }, //[cite: 1]
-            { word: "dress", type: "", example: "" }, //[cite: 1]
-            { word: "earring", type: "", example: "" }, //[cite: 1]
-            { word: "fashion", type: "", example: "" }, //[cite: 1]
-            { word: "fasten", type: "", example: "" }, //[cite: 1]
-            { word: "fit", type: "v", example: "" }, //[cite: 1]
-            { word: "fold", type: "v", example: "" }, //[cite: 1]
-            { word: "glasses", type: "", example: "" }, //[cite: 1]
-            { word: "glove", type: "", example: "" }, //[cite: 1]
-            { word: "get dressed", type: "", example: "" }, //[cite: 1]
-            { word: "go (with/together)", type: "phr v", example: "" }, //[cite: 1]
-            { word: "handbag", type: "", example: "" }, //[cite: 1]
-            { word: "handkerchief", type: "", example: "" }, //[cite: 1]
-            { word: "hat", type: "", example: "" }, //[cite: 1]
-            { word: "hoodie", type: "", example: "" }, //[cite: 1]
-            { word: "jacket", type: "", example: "" }, //[cite: 1]
-            { word: "jeans", type: "", example: "" }, //[cite: 1]
-            { word: "jewellery / jewelry", type: "", example: "" }, //[cite: 1]
-            { word: "jumper", type: "", example: "" }, //[cite: 1]
-            { word: "kit", type: "", example: "" }, //[cite: 1]
-            { word: "knit", type: "", example: "" }, //[cite: 1]
-            { word: "label", type: "", example: "" } //[cite: 1]
-        ],
-        "Colours": [
-            { word: "(dark/light/pale)", type: "", example: "" }, //[cite: 1]
-            { word: "black", type: "", example: "" }, //[cite: 1]
-            { word: "blue", type: "", example: "" }, //[cite: 1]
-            { word: "brown", type: "", example: "" }, //[cite: 1]
-            { word: "gold", type: "", example: "" }, //[cite: 1]
-            { word: "golden", type: "", example: "" }, //[cite: 1]
-            { word: "green", type: "", example: "" }, //[cite: 1]
-            { word: "grey / gray", type: "", example: "" }, //[cite: 1]
-            { word: "orange", type: "", example: "" }, //[cite: 1]
-            { word: "pink", type: "", example: "" }, //[cite: 1]
-            { word: "purple", type: "", example: "" }, //[cite: 1]
-            { word: "red", type: "", example: "" }, //[cite: 1]
-            { word: "silver", type: "", example: "" }, //[cite: 1]
-            { word: "white", type: "", example: "" }, //[cite: 1]
-            { word: "yellow", type: "", example: "" } //[cite: 1]
-        ],
-        "Communications and Technology": [
-            { word: "access", type: "", example: "" }, //[cite: 1]
-            { word: "address", type: "", example: "" }, //[cite: 1]
-            { word: "app", type: "", example: "" }, //[cite: 1]
-            { word: "at / @", type: "", example: "" }, //[cite: 1]
-            { word: "blog", type: "", example: "" }, //[cite: 1]
-            { word: "blogger", type: "", example: "" }, //[cite: 1]
-            { word: "by post", type: "", example: "" }, //[cite: 1]
-            { word: "calculator", type: "", example: "" }, //[cite: 1]
-            { word: "call", type: "v", example: "" }, //[cite: 1]
-            { word: "call back", type: "", example: "" }, //[cite: 1]
-            { word: "CD (player)", type: "", example: "" }, //[cite: 1]
-            { word: "cell phone", type: "", example: "" }, //[cite: 1]
-            { word: "chat", type: "", example: "" }, //[cite: 1]
-            { word: "chat room", type: "", example: "" }, //[cite: 1]
-            { word: "click", type: "v", example: "" }, //[cite: 1]
-            { word: "computer", type: "", example: "" }, //[cite: 1]
-            { word: "comment (online)", type: "", example: "" }, //[cite: 1]
-            { word: "connect", type: "", example: "" } //[cite: 1]
-        ]
-    }
-};
+    <header class="bg-indigo-600 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchView('dashboard-view')">
+                <i class="fa-solid fa-graduation-cap text-2xl text-amber-400"></i>
+                <span class="font-bold text-xl tracking-wide">PET Master Vocabulary</span>
+            </div>
+            <nav class="flex space-x-2">
+                <button onclick="switchView('dashboard-view')" class="px-3 py-1.5 rounded-lg hover:bg-indigo-700 transition flex items-center space-x-1">
+                    <i class="fa-solid fa-house"></i> <span class="hidden sm:inline">Trang chủ</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 py-6">
+        
+        <section id="dashboard-view" class="view-section space-y-8">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-6 sm:p-8 text-white shadow-xl text-center max-w-3xl mx-auto">
+                <h1 class="text-2xl sm:text-4xl font-extrabold mb-2">Học Từ Vựng B1 Preliminary (PET)</h1>
+                <p class="text-indigo-100 text-sm sm:text-base">Hệ thống Flashcards chuẩn Cambridge kết hợp bài tập tương tác thông minh giúp ghi nhớ từ vựng sâu sắc.</p>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold border-l-4 border-indigo-600 pl-3 mb-4 flex items-center space-x-2">
+                    <i class="fa-solid fa-sort-alpha-down text-indigo-600"></i>
+                    <span>Học Theo Bảng Chữ Cái (Alphabet)</span>
+                </h2>
+                <div id="alphabet-container" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
+                    </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold border-l-4 border-purple-600 pl-3 mb-4 flex items-center space-x-2">
+                    <i class="fa-solid fa-tags text-purple-600"></i>
+                    <span>Học Theo Chủ Đề (Topics)</span>
+                </h2>
+                <div id="topics-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    </div>
+            </div>
+        </section>
+
+        <section id="flashcard-view" class="view-section hidden max-w-2xl mx-auto space-y-6">
+            <div class="flex justify-between items-center">
+                <button onclick="switchView('dashboard-view')" class="text-slate-600 hover:text-indigo-600 flex items-center space-x-1 font-medium">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Quay lại</span>
+                </button>
+                <span id="study-title" class="font-bold text-lg text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full"></span>
+                <span id="card-progress" class="text-sm font-semibold text-slate-500">0/0</span>
+            </div>
+
+            <div class="perspective-1000 w-full h-80 cursor-pointer" onclick="flipCard()">
+                <div id="flashcard" class="transform-style-3d transition-transform duration-500 w-full h-full relative shadow-xl rounded-2xl">
+                    <div class="backface-hidden absolute inset-0 bg-white border border-slate-200 rounded-2xl flex flex-col justify-between p-6 text-center">
+                        <div class="text-slate-400 text-xs font-semibold uppercase tracking-wider">Mặt Trước (Click để lật)</div>
+                        <div class="space-y-2">
+                            <h3 id="card-word" class="text-3xl sm:text-4xl font-extrabold text-slate-800"></h3>
+                            <p id="card-type" class="text-sm italic text-indigo-500 font-medium"></p>
+                        </div>
+                        <div>
+                            <button onclick="playAudio(event)" class="bg-indigo-100 text-indigo-600 hover:bg-indigo-200 p-4 rounded-full transition shadow-sm inline-flex items-center justify-center">
+                                <i class="fa-solid fa-volume-high text-xl"></i>
+                            </button>
+                            <span class="block text-xs text-slate-400 mt-1">Phát âm chuẩn Cambridge</span>
+                        </div>
+                    </div>
+                    <div class="backface-hidden rotate-y-180 absolute inset-0 bg-gradient-to-br from-indigo-50 to-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between p-6 text-center">
+                        <div class="text-indigo-500 text-xs font-semibold uppercase tracking-wider">Mặt Sau (Nghĩa & Ví dụ)</div>
+                        <div class="space-y-4 px-2">
+                            <h4 id="card-definition" class="text-2xl font-bold text-indigo-900"></h4>
+                            <div class="bg-white p-3 rounded-xl border border-indigo-100 text-left shadow-sm">
+                                <span class="text-xs font-bold text-slate-400 block uppercase mb-1">Ví dụ:</span>
+                                <p id="card-sentence" class="text-sm sm:text-base italic text-slate-700 font-medium"></p>
+                            </div>
+                        </div>
+                        <div class="text-xs text-slate-400">Click để quay lại mặt trước</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-2">
+                <button onclick="prevCard()" class="bg-slate-200 text-slate-700 hover:bg-slate-300 px-5 py-2.5 rounded-xl font-semibold transition flex items-center space-x-2">
+                    <i class="fa-solid fa-chevron-left"></i> <span>Trước</span>
+                </button>
+                <button onclick="nextCard()" class="bg-indigo-600 text-white hover:bg-indigo-700 px-5 py-2.5 rounded-xl font-semibold transition flex items-center space-x-2 shadow-md shadow-indigo-200">
+                    <span>Tiếp theo</span> <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center mt-8">
+                <h4 class="font-bold text-amber-800 mb-1">Đã thuộc từ vựng của chương này?</h4>
+                <p class="text-amber-700 text-xs mb-3">Tham gia làm bài tập kiểm tra và trò chơi từ dễ đến nâng cao.</p>
+                <button onclick="startPractice()" class="bg-amber-500 text-white hover:bg-amber-600 px-5 py-2 rounded-xl font-bold text-sm transition shadow-sm">
+                    <i class="fa-solid fa-pencil-alt mr-1"></i> Làm bài tập ngay
+                </button>
+            </div>
+        </section>
+
+        <section id="practice-view" class="view-section hidden max-w-3xl mx-auto space-y-6">
+            <div class="flex justify-between items-center">
+                <button onclick="switchView('flashcard-view')" class="text-slate-600 hover:text-indigo-600 flex items-center space-x-1 font-medium">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Quay lại Thẻ học</span>
+                </button>
+                <h2 class="text-xl font-bold text-slate-800">Hệ Thống Bài Tập Ứng Dụng</h2>
+                <span class="text-xs bg-purple-100 text-purple-700 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider" id="practice-mode-badge">B1 Level</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 bg-slate-200 p-1 rounded-xl">
+                <button id="btn-easy" onclick="changeExerciseLevel('easy')" class="py-2 text-center rounded-lg font-bold text-sm transition bg-white text-indigo-600 shadow-sm">Dễ (Trắc nghiệm)</button>
+                <button id="btn-medium" onclick="changeExerciseLevel('medium')" class="py-2 text-center rounded-lg font-bold text-sm transition text-slate-600 hover:bg-white/50">Trung bình (Nối từ)</button>
+                <button id="btn-advanced" onclick="changeExerciseLevel('advanced')" class="py-2 text-center rounded-lg font-bold text-sm transition text-slate-600 hover:bg-white/50">Nâng cao (Điền ô trống)</button>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm min-h-[300px]">
+                <div id="exercise-easy" class="space-y-6">
+                    <div class="text-center font-medium text-slate-500 text-sm">Chọn nghĩa tiếng Việt chính xác nhất cho từ vựng sau:</div>
+                    <div id="easy-question-box" class="space-y-4">
+                        </div>
+                </div>
+
+                <div id="exercise-medium" class="space-y-6 hidden">
+                    <div class="text-center font-medium text-slate-500 text-sm">Hãy chọn một từ tiếng Anh bên trái, sau đó chọn định nghĩa tương ứng bên phải.</div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div id="medium-words" class="space-y-2"></div>
+                        <div id="medium-defs" class="space-y-2"></div>
+                    </div>
+                </div>
+
+                <div id="exercise-advanced" class="space-y-6 hidden">
+                    <div class="text-center font-medium text-slate-500 text-sm">Đọc câu ví dụ bên dưới và điền từ vựng chuẩn xác (Chú ý số ít/nhiều hoặc thì của từ nếu cần):</div>
+                    <div id="advanced-question-box" class="space-y-6">
+                        </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end space-x-3">
+                <button onclick="goToGame()" class="bg-emerald-500 text-white hover:bg-emerald-600 px-6 py-3 rounded-xl font-bold transition shadow-md shadow-emerald-100 flex items-center space-x-1">
+                    <i class="fa-solid fa-gamepad"></i> <span>Chơi Game Xếp Chữ</span>
+                </button>
+                <button id="submit-exercise-btn" onclick="gradeExercise()" class="bg-indigo-600 text-white hover:bg-indigo-700 px-8 py-3 rounded-xl font-bold transition shadow-md shadow-indigo-100">
+                    <i class="fa-solid fa-check-double mr-1"></i> Nộp bài & Chấm điểm
+                </button>
+            </div>
+        </section>
+
+        <section id="game-view" class="view-section hidden max-w-xl mx-auto space-y-6 text-center">
+            <div class="flex justify-between items-center text-left">
+                <button onclick="switchView('practice-view')" class="text-slate-600 hover:text-indigo-600 flex items-center space-x-1 font-medium">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Quay lại bài tập</span>
+                </button>
+                <h2 class="text-lg font-bold text-slate-800">Mini Game: Word Scramble 🧩</h2>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="space-y-1">
+                    <div class="text-xs font-bold text-emerald-600 tracking-wider uppercase">Thử thách trí nhớ chính tả</div>
+                    <div class="text-sm text-slate-400">Hãy sắp xếp lại các chữ cái đã bị xáo trộn dưới đây thành từ đúng:</div>
+                </div>
+
+                <div id="scrambled-word" class="text-4xl font-extrabold tracking-widest text-indigo-600 bg-indigo-50 py-4 rounded-xl select-none uppercase">
+                    ----
+                </div>
+
+                <div class="bg-slate-50 p-3 rounded-xl text-sm border border-slate-100">
+                    <span class="font-bold text-slate-500">Gợi ý nghĩa:</span> <span id="game-hint" class="font-semibold text-slate-700"></span>
+                </div>
+
+                <div class="space-y-3">
+                    <input type="text" id="game-input" autocomplete="off" placeholder="Nhập từ chính xác tại đây..." class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-center text-xl font-bold tracking-wide focus:border-indigo-500 focus:outline-none uppercase">
+                    <div id="game-feedback" class="text-sm font-bold hidden"></div>
+                </div>
+
+                <div class="flex justify-between items-center pt-2">
+                    <button onclick="skipGameWord()" class="text-slate-400 hover:text-slate-600 text-sm font-medium">Bỏ qua từ này <i class="fa-solid fa-forward"></i></button>
+                    <button onclick="checkGameAnswer()" class="bg-emerald-500 text-white hover:bg-emerald-600 px-6 py-2.5 rounded-xl font-bold transition shadow-md shadow-emerald-100">
+                        Kiểm tra câu trả lời
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="score-view" class="view-section hidden max-w-xl mx-auto text-center space-y-6">
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 shadow-xl space-y-6">
+                <div id="score-icon-box">
+                    </div>
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-800" id="score-headline">Hoàn thành bài kiểm tra!</h2>
+                    <p class="text-slate-400 text-sm mt-1" id="score-subline">Kết quả chi tiết điểm số của học sinh</p>
+                </div>
+
+                <div class="inline-block bg-slate-50 border-4 border-indigo-600 rounded-full w-32 h-32 flex flex-col justify-center items-center shadow-inner mx-auto">
+                    <span class="text-4xl font-black text-indigo-600" id="score-percentage">0%</span>
+                    <span class="text-xs text-slate-400 font-bold" id="score-fraction">0/0 Câu</span>
+                </div>
+
+                <div id="score-comment" class="text-sm font-medium text-slate-600 px-4">
+                    Khá lắm! Hãy tiếp tục luyện tập thêm các chương từ vựng khác nhé.
+                </div>
+
+                <div class="border-t border-slate-100 pt-4 flex flex-col sm:flex-row gap-2 justify-center">
+                    <button onclick="switchView('practice-view')" class="bg-slate-200 text-slate-700 hover:bg-slate-300 px-5 py-2.5 rounded-xl font-semibold transition text-sm">
+                        Làm lại bài tập
+                    </button>
+                    <button onclick="switchView('dashboard-view')" class="bg-indigo-600 text-white hover:bg-indigo-700 px-6 py-2.5 rounded-xl font-bold transition text-sm shadow-md">
+                        Học học chương từ vựng khác
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-100 border-t border-slate-200 text-center py-4 text-xs text-slate-400">
+        &copy; 2026 PET Cambridge Vocabulary Platform. Tạo bài giảng tinh gọn cho giáo viên & học sinh.
+    </footer>
+
+    <script>
+        // CƠ SỞ DỮ LIỆU TỪ VỰNG GỐC TRÍCH XUẤT TỪ FILE WORDLIST
+        const vocabularyData = {
+            alphabet: {
+                "A": [
+                    { word: "ability", type: "n", definition: "khả năng, năng lực", sentence: "She has the ability to pass the B1 Preliminary exam easily." },
+                    { word: "abroad", type: "adv", definition: "ở nước ngoài, ra nước ngoài", sentence: "Many ambitious students love traveling abroad to experience cultures." },
+                    { word: "accent", type: "n", definition: "giọng điệu, trọng âm địa phương", sentence: "She speaks English fluently with a beautiful French accent." },
+                    { word: "accident", type: "n", definition: "tai nạn, rủi ro ngoài ý muốn", sentence: "The police arrived quickly at the scene of the traffic accident." },
+                    { word: "accommodation", type: "n", definition: "chỗ ở, phòng ở tiện nghi", sentence: "The university helps international students find safe accommodation." }
+                ],
+                "B": [
+                    { word: "background", type: "n", definition: "nền tảng, lý lịch, bối cảnh phía sau", sentence: "Tell me a little about your educational background." },
+                    { word: "backpack", type: "n", definition: "ba lô đeo trên lưng", sentence: "He packed a heavy backpack and began his mountain hiking trip." },
+                    { word: "badminton", type: "n", definition: "môn cầu lông", sentence: "They usually play badminton in the sports center on Sunday afternoons." },
+                    { word: "beautiful", type: "adj", definition: "đẹp đẽ, lộng lẫy", sentence: "The local tour guide took us to a beautiful beach." }
+                ],
+                "C": [
+                    { word: "cab", type: "n", definition: "xe taxi", sentence: "We were running very late so we caught a cab straight to the airport." },
+                    { word: "cabin", type: "n", definition: "buồng, cabin máy bay hoặc tàu thủy", sentence: "The helpful cabin crew served drinks throughout the flight." },
+                    { word: "candidate", type: "n", definition: "thí sinh, ứng cử viên", sentence: "Each candidate must show an ID card before entering the exam room." },
+                    { word: "career", type: "n", definition: "sự nghiệp, nghề nghiệp lâu dài", sentence: "She wants to pursue a successful career in computer engineering." }
+                ],
+                "D": [
+                    { word: "damage", type: "v / n", definition: "gây tổn hại, thiệt hại", sentence: "The heavy storm caused severe damage to the coastal village roof." },
+                    { word: "dangerous", type: "adj", definition: "nguy hiểm, mất an toàn", sentence: "It is dangerous to swim deep in this river during the heavy rain." },
+                    { word: "degree", type: "n", definition: "bằng cấp đại học / mức độ, nhiệt độ", sentence: "He is proud to hold a first-class degree in mathematics." },
+                    { word: "delicious", type: "adj", definition: "thơm ngon, đậm vị", sentence: "The chef prepared a delicious seafood dinner for all the guests." }
+                ]
+            },
+            topics: {
+                "Work & Jobs": [
+                    { word: "actor", type: "n", definition: "nam diễn viên", sentence: "He is a famous Hollywood actor who starred in the new movie." },
+                    { word: "actress", type: "n", definition: "nữ diễn viên", sentence: "The young actress gave an outstanding dramatic performance on stage." },
+                    { word: "architect", type: "n", definition: "kiến trúc sư", sentence: "The professional architect designed a sustainable and eco-friendly villa." },
+                    { word: "assistant", type: "n", definition: "trợ lý, người phụ tá", sentence: "The shop assistant helped me find the perfect matching dress size." },
+                    { word: "astronaut", type: "n", definition: "phi hành gia vũ trụ", sentence: "The brave astronaut floated out into space during the repairs." },
+                    { word: "chef", type: "n", definition: "đầu bếp trưởng", sentence: "The restaurant chef recommends trying the freshly caught fish today." },
+                    { word: "dentist", type: "n", definition: "bác sĩ nha khoa", sentence: "You should visit your dentist regularly to keep your teeth healthy." }
+                ],
+                "Weather": [
+                    { word: "cloudy", type: "adj", definition: "nhiều mây, u ám", sentence: "The sky looks cloudy, so make sure you bring an umbrella along." },
+                    { word: "gale", type: "n", definition: "cơn bão gió mạnh", sentence: "The ancient fence was blown down overnight by a sudden strong gale." },
+                    { word: "shower", type: "n", definition: "mưa rào ngắn", sentence: "There will be a quick shower this afternoon, but it will clear up soon." },
+                    { word: "forecast", type: "n", definition: "bản tin dự báo thời tiết", sentence: "According to the weather forecast, tomorrow will be hot and sunny." },
+                    { word: "humid", type: "adj", definition: "ẩm ướt, khí hậu oi bức", sentence: "The climate in summer here is extremely hot and humid." },
+                    { word: "storm", type: "n", definition: "giông bão kèm sấm chớp", sentence: "The intense lightning storm caused a sudden power cut across the town." }
+                ]
+            }
+        };
+
+        // BIẾN QUẢN LÝ TRẠNG THÁI TOÀN CỤC
+        let currentWordsList = [];
+        let currentCardIndex = 0;
+        let currentLevel = 'easy'; // 'easy' | 'medium' | 'advanced'
+        let scrambleCurrentWordObj = null;
+
+        // KHỞI CHẠY KHU VỰC TRANG CHỦ
+        document.addEventListener("DOMContentLoaded", () => {
+            renderDashboard();
+            // Kích hoạt nạp âm thanh nền trình duyệt sẵn sàng
+            window.speechSynthesis.getVoices();
+        });
+
+        // ĐIỀU HƯỚNG VIEW (ẨN/HIỆN PHÂN ĐOẠN)
+        function switchView(viewId) {
+            document.querySelectorAll(".view-section").forEach(section => {
+                section.classList.add("hidden");
+            });
+            document.getElementById(viewId).classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // DỰNG GIAO DIỆN TRANG CHỦ DỰA TRÊN DỮ LIỆU
+        function renderDashboard() {
+            const alphaBox = document.getElementById("alphabet-container");
+            const topicBox = document.getElementById("topics-container");
+            
+            alphaBox.innerHTML = "";
+            topicBox.innerHTML = "";
+
+            // Tạo các ô kí tự A-Z có dữ liệu
+            Object.keys(vocabularyData.alphabet).forEach(letter => {
+                const btn = document.createElement("button");
+                btn.className = "bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-500 text-indigo-600 font-bold py-3 px-4 rounded-xl shadow-sm transition text-center text-lg flex flex-col items-center justify-center space-y-1";
+                btn.onclick = () => startStudy('alphabet', letter);
+                btn.innerHTML = `<span>${letter}</span><span class="text-[10px] text-slate-400 font-normal">${vocabularyData.alphabet[letter].length} từ</span>`;
+                alphaBox.appendChild(btn);
+            });
+
+            // Tạo các thẻ chủ đề từ vựng
+            Object.keys(vocabularyData.topics).forEach(topic => {
+                const card = document.createElement("div");
+                card.className = "bg-white hover:bg-purple-50/50 border border-slate-200 hover:border-purple-500 p-5 rounded-xl shadow-sm transition flex justify-between items-center cursor-pointer group";
+                card.onclick = () => startStudy('topics', topic);
+                card.innerHTML = `
+                    <div>
+                        <h3 class="font-bold text-slate-800 group-hover:text-purple-700 transition">${topic}</h3>
+                        <p class="text-xs text-slate-400 mt-1">${vocabularyData.topics[topic].length} từ vựng cốt lõi</p>
+                    </div>
+                    <div class="bg-purple-100 text-purple-600 p-2.5 rounded-lg group-hover:bg-purple-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-book-open text-sm"></i>
+                    </div>
+                `;
+                topicBox.appendChild(card);
+            });
+        }
+
+        // BẮT ĐẦU CHƯƠNG TRÌNH HỌC FLASHCARD
+        function startStudy(type, key) {
+            currentWordsList = [...vocabularyData[type][key]];
+            currentCardIndex = 0;
+            
+            document.getElementById("study-title").innerText = `${type === 'alphabet' ? 'Mục từ chữ' : 'Chủ đề:'} ${key}`;
+            updateFlashcardDOM();
+            
+            // Đảm bảo thẻ quay lại mặt trước mặc định
+            document.getElementById("flashcard").classList.remove("rotate-y-180");
+            switchView("flashcard-view");
+        }
+
+        // CẬP NHẬT DỮ LIỆU LÊN FLASHCARD HIỆN TẠI
+        function updateFlashcardDOM() {
+            if (currentWordsList.length === 0) return;
+            const item = currentWordsList[currentCardIndex];
+
+            document.getElementById("card-progress").innerText = `${currentCardIndex + 1}/${currentWordsList.length}`;
+            document.getElementById("card-word").innerText = item.word;
+            document.getElementById("card-type").innerText = `(${item.type})`;
+            document.getElementById("card-definition").innerText = item.definition;
+            document.getElementById("card-sentence").innerText = item.sentence;
+        }
+
+        // LẬT MẶT THẺ FLASHCARD
+        function flipCard() {
+            document.getElementById("flashcard").classList.toggle("rotate-y-180");
+        }
+
+        // PHÁT ÂM CHUẨN GIỌNG CAMBRIDGE (ANH - ANH)
+        function playAudio(event) {
+            if(event) event.stopPropagation(); // Ngăn hành vi lật thẻ khi click icon loa
+            const word = currentWordsList[currentCardIndex].word;
+            
+            const utterance = new SpeechSynthesisUtterance(word);
+            const voices = window.speechSynthesis.getVoices();
+            
+            // Tìm kiếm giọng đọc chuẩn British English (en-GB)
+            const ukVoice = voices.find(v => v.lang === 'en-GB' || v.lang.includes('GB'));
+            if(ukVoice) {
+                utterance.voice = ukVoice;
+            } else {
+                utterance.lang = 'en-US'; // Sụp đổ về en-US nếu thiết bị không có en-GB
+            }
+            utterance.rate = 0.85; // Giảm nhẹ tốc độ giúp học sinh dễ bắt âm
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function nextCard() {
+            if (currentCardIndex < currentWordsList.length - 1) {
+                currentCardIndex++;
+                // Lật về mặt trước trước khi đổi từ
+                document.getElementById("flashcard").classList.remove("rotate-y-180");
+                setTimeout(updateFlashcardDOM, 150);
+            } else {
+                alert("Bạn đã hoàn thành lượt xem hết từ vựng của danh sách này! Bắt đầu làm bài tập nhé.");
+                startPractice();
+            }
+        }
+
+        function prevCard() {
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+                document.getElementById("flashcard").classList.remove("rotate-y-180");
+                setTimeout(updateFlashcardDOM, 150);
+            }
+        }
+
+        // ================= HỆ THỐNG LUYỆN TẬP TỰ ĐỘNG GENERATE =================
+        function startPractice() {
+            currentLevel = 'easy';
+            switchView("practice-view");
+            buildExercise();
+        }
+
+        function changeExerciseLevel(level) {
+            currentLevel = level;
+            const buttons = {
+                easy: document.getElementById("btn-easy"),
+                medium: document.getElementById("btn-medium"),
+                advanced: document.getElementById("btn-advanced")
+            };
+            const blocks = {
+                easy: document.getElementById("exercise-easy"),
+                medium: document.getElementById("exercise-medium"),
+                advanced: document.getElementById("exercise-advanced")
+            };
+
+            // Toggle trạng thái nút active
+            Object.keys(buttons).forEach(k => {
+                if(k === level) {
+                    buttons[k].className = "py-2 text-center rounded-lg font-bold text-sm transition bg-white text-indigo-600 shadow-sm";
+                    blocks[k].classList.remove("hidden");
+                } else {
+                    buttons[k].className = "py-2 text-center rounded-lg font-bold text-sm transition text-slate-600 hover:bg-white/50";
+                    blocks[k].classList.add("hidden");
+                }
+            });
+
+            buildExercise();
+        }
+
+        // SINH CÂU HỎI THEO LEVEL TỪ LIST TỪ VỰNG ĐANG HỌC
+        function buildExercise() {
+            // Trộn ngẫu nhiên tập từ vựng hiện hành để tạo độ khó khách quan
+            const pool = [...currentWordsList];
+            
+            if (currentLevel === 'easy') {
+                const box = document.getElementById("easy-question-box");
+                box.innerHTML = "";
+                
+                pool.forEach((item, idx) => {
+                    // Tạo các đáp án gây nhiễu từ các từ khác trong list hoặc dự phòng
+                    let distractorDefs = currentWordsList
+                        .filter(w => w.word !== item.word)
+                        .map(w => w.definition);
+                    
+                    // Trộn chọn lấy 3 đáp án nhiễu + 1 đáp án đúng
+                    distractorDefs = distractorDefs.sort(() => 0.5 - Math.random()).slice(0, 3);
+                    const choices = [...distractorDefs, item.definition].sort(() => 0.5 - Math.random());
+
+                    const qDiv = document.createElement("div");
+                    qDiv.className = "p-4 border border-slate-100 bg-slate-50/50 rounded-xl space-y-2 question-unit";
+                    qDiv.dataset.correct = item.definition;
+                    qDiv.innerHTML = `
+                        <p class="font-bold text-slate-700 text-base">Câu ${idx+1}: <span class="text-indigo-600 text-lg font-extrabold underline">${item.word}</span> nghĩa là gì?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                            ${choices.map(c => `
+                                <label class="flex items-center space-x-3 p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:bg-indigo-50/30 transition">
+                                    <input type="radio" name="easy-q-${idx}" value="${c}" class="w-4 h-4 text-indigo-600 focus:ring-indigo-500">
+                                    <span class="text-sm text-slate-600 font-medium">${c}</span>
+                                </label>
+                            `).join('')}
+                        </div>
+                    `;
+                    box.appendChild(qDiv);
+                });
+            } 
+            else if (currentLevel === 'medium') {
+                const wordContainer = document.getElementById("medium-words");
+                const defContainer = document.getElementById("medium-defs");
+                wordContainer.innerHTML = "";
+                defContainer.innerHTML = "";
+
+                // Sinh cặp thẻ Nối từ
+                const leftWords = pool.map(item => ({word: item.word, matchKey: item.word}));
+                const rightDefs = pool.map(item => ({definition: item.definition, matchKey: item.word}));
+
+                // Xáo trộn ngẫu nhiên 2 cột một cách độc lập
+                leftWords.sort(() => 0.5 - Math.random());
+                rightDefs.sort(() => 0.5 - Math.random());
+
+                leftWords.forEach(w => {
+                    const d = document.createElement("div");
+                    d.className = "p-3 bg-white border-2 border-slate-200 text-center font-bold rounded-xl cursor-pointer transition select-none hover:border-indigo-400 match-node-left text-sm sm:text-base";
+                    d.dataset.key = w.matchKey;
+                    d.innerText = w.word;
+                    d.onclick = () => selectMatchNode(d, 'left');
+                    wordContainer.appendChild(d);
+                });
+
+                rightDefs.forEach(r => {
+                    const d = document.createElement("div");
+                    d.className = "p-3 bg-white border-2 border-slate-200 text-center font-medium text-xs sm:text-sm rounded-xl cursor-pointer transition select-none hover:border-indigo-400 match-node-right";
+                    d.dataset.key = r.matchKey;
+                    d.innerText = r.definition;
+                    d.onclick = () => selectMatchNode(d, 'right');
+                    defContainer.appendChild(d);
+                });
+            } 
+            else if (currentLevel === 'advanced') {
+                const box = document.getElementById("advanced-question-box");
+                box.innerHTML = "";
+
+                pool.forEach((item, idx) => {
+                    // Ẩn từ vựng chính trong câu ví dụ bằng dấu gạch dưới
+                    const regex = new RegExp(item.word, 'gi');
+                    const hiddenSentence = item.sentence.replace(regex, "________");
+
+                    const qDiv = document.createElement("div");
+                    qDiv.className = "p-4 border border-slate-100 bg-slate-50 rounded-xl space-y-3 advanced-unit";
+                    qDiv.dataset.correct = item.word.toLowerCase().trim();
+                    qDiv.innerHTML = `
+                        <p class="text-sm font-semibold text-slate-500">Câu ${idx+1}: Điền từ còn thiếu vào ô trống dưới đây:</p>
+                        <div class="text-slate-800 font-medium italic text-base bg-white border border-slate-200 p-3 rounded-lg shadow-inner">
+                            "${hiddenSentence}"
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm text-slate-500">
+                            <span>Gợi ý: Trọng âm (${item.type}) - mang ý nghĩa: <strong>${item.definition}</strong></span>
+                        </div>
+                        <input type="text" placeholder="Nhập từ viết chính xác..." class="w-full sm:w-64 border-2 border-slate-200 focus:border-indigo-500 focus:outline-none px-3 py-2 rounded-lg font-bold text-slate-700 tracking-wide text-sm">
+                    `;
+                    box.appendChild(qDiv);
+                });
+            }
+        }
+
+        // LOGIC LỰA CHỌN CỦA BÀI TẬP NỐI TỪ
+        let selectedLeftNode = null;
+        let selectedRightNode = null;
+        let completedPairsCount = 0;
+
+        function selectMatchNode(element, side) {
+            if (element.classList.contains('bg-slate-100')) return; // Thẻ đã hoàn thành xong trước đó
+
+            if (side === 'left') {
+                if (selectedLeftNode) selectedLeftNode.classList.remove('border-indigo-500', 'bg-indigo-50');
+                selectedLeftNode = element;
+                selectedLeftNode.classList.add('border-indigo-500', 'bg-indigo-50');
+            } else {
+                if (selectedRightNode) selectedRightNode.classList.remove('border-indigo-500', 'bg-indigo-50');
+                selectedRightNode = element;
+                selectedRightNode.classList.add('border-indigo-500', 'bg-indigo-50');
+            }
+
+            // Kiểm tra so khớp tức thì khi học sinh chọn đủ 2 bên
+            if (selectedLeftNode && selectedRightNode) {
+                if (selectedLeftNode.dataset.key === selectedRightNode.dataset.key) {
+                    // Match đúng
+                    selectedLeftNode.className = "p-3 bg-emerald-50 border-2 border-emerald-500 text-emerald-700 text-center font-bold rounded-xl transition select-none text-sm sm:text-base opacity-70";
+                    selectedRightNode.className = "p-3 bg-emerald-50 border-2 border-emerald-500 text-emerald-700 text-center font-medium rounded-xl transition select-none text-xs sm:text-sm opacity-70";
+                    completedPairsCount++;
+                } else {
+                    // Sai -> Hiển thị cảnh báo đỏ chớp rồi reset
+                    const l = selectedLeftNode;
+                    const r = selectedRightNode;
+                    l.classList.add('border-rose-500', 'bg-rose-50');
+                    r.classList.add('border-rose-500', 'bg-rose-50');
+                    setTimeout(() => {
+                        l.classList.remove('border-rose-500', 'bg-rose-50', 'border-indigo-500');
+                        r.classList.remove('border-rose-500', 'bg-rose-50', 'border-indigo-500');
+                    }, 400);
+                }
+                selectedLeftNode = null;
+                selectedRightNode = null;
+            }
+        }
+
+        // CHẤM ĐIỂM TỰ ĐỘNG TOÀN DIỆN VÀ TRẢ ĐÁP ÁN
+        function gradeExercise() {
+            let correctTotal = 0;
+            let questionsCount = currentWordsList.length;
+
+            if (currentLevel === 'easy') {
+                const questionUnits = document.querySelectorAll(".question-unit");
+                questionUnits.forEach(unit => {
+                    const selectedInput = unit.querySelector("input[type='radio']:checked");
+                    const correctAnswer = unit.dataset.correct;
+                    if (selectedInput && selectedInput.value === correctAnswer) {
+                        correctTotal++;
+                    }
+                });
+            } 
+            else if (currentLevel === 'medium') {
+                correctTotal = completedPairsCount;
+                completedPairsCount = 0; // reset
+            } 
+            else if (currentLevel === 'advanced') {
+                const advancedUnits = document.querySelectorAll(".advanced-unit");
+                advancedUnits.forEach(unit => {
+                    const inputVal = unit.querySelector("input").value.toLowerCase().trim();
+                    const correctAnswer = unit.dataset.correct;
+                    if (inputVal === correctAnswer) {
+                        correctTotal++;
+                    }
+                });
+            }
+
+            // Tính toán tỷ lệ phần trăm
+            const pct = Math.round((correctTotal / questionsCount) * 100) || 0;
+            
+            // Cập nhật lên View Scoreboard công khai
+            document.getElementById("score-percentage").innerText = `${pct}%`;
+            document.getElementById("score-fraction").innerText = `${correctTotal}/${questionsCount}`;
+            
+            const iconBox = document.getElementById("score-icon-box");
+            const headline = document.getElementById("score-headline");
+            
+            if(pct >= 80) {
+                iconBox.innerHTML = `<i class="fa-solid fa-trophy text-6xl text-amber-500 animate-bounce"></i>`;
+                headline.innerText = "Xuất sắc! Đạt chuẩn PET";
+            } else if (pct >= 50) {
+                iconBox.innerHTML = `<i class="fa-solid fa-star-half-stroke text-6xl text-indigo-500"></i>`;
+                headline.innerText = "Khá tốt! Cần cố gắng thêm";
+            } else {
+                iconBox.innerHTML = `<i class="fa-solid fa-circle-exclamation text-6xl text-rose-500"></i>`;
+                headline.innerText = "Chưa đạt! Cần ôn luyện lại";
+            }
+
+            switchView("score-view");
+        }
+
+        // ================= HỆ THỐNG TRÒ CHƠI MINI-GAME WORD SCRAMBLE =================
+        function goToGame() {
+            switchView("game-view");
+            loadGameWord();
+        }
+
+        function loadGameWord() {
+            if(currentWordsList.length === 0) return;
+            // Lấy ngẫu nhiên 1 từ trong tập từ đang chọn để thử thách
+            const randomObj = currentWordsList[Math.floor(Math.random() * currentWordsList.length)];
+            scrambleCurrentWordObj = randomObj;
+
+            const originalWord = randomObj.word;
+            
+            // Tiến hành xáo trộn trật tự các ký tự trong chuỗi chữ cái
+            let scrambled = originalWord.split('').sort(() => 0.5 - Math.random()).join('');
+            // Ngăn việc xáo trộn trùng nguyên văn từ gốc ban đầu
+            while(scrambled === originalWord && originalWord.length > 1) {
+                scrambled = originalWord.split('').sort(() => 0.5 - Math.random()).join('');
+            }
+
+            document.getElementById("scrambled-word").innerText = scrambled;
+            document.getElementById("game-hint").innerText = randomObj.definition;
+            
+            const feedback = document.getElementById("game-feedback");
+            feedback.classList.add("hidden");
+            
+            const gInput = document.getElementById("game-input");
+            gInput.value = "";
+            gInput.className = "w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-center text-xl font-bold tracking-wide focus:border-indigo-500 focus:outline-none uppercase";
+        }
+
+        function checkGameAnswer() {
+            const inputVal = document.getElementById("game-input").value.toLowerCase().trim();
+            const correctVal = scrambleCurrentWordObj.word.toLowerCase().trim();
+            const feedback = document.getElementById("game-feedback");
+            const gInput = document.getElementById("game-input");
+
+            feedback.classList.remove("hidden");
+            if (inputVal === correctVal) {
+                feedback.innerText = "🎉 Chính xác hoàn hảo! Trí nhớ chính tả của bạn rất tốt.";
+                feedback.className = "text-sm font-bold text-emerald-600";
+                gInput.className = "w-full border-2 border-emerald-500 bg-emerald-50 rounded-xl px-4 py-3 text-center text-xl font-bold tracking-wide focus:outline-none uppercase text-emerald-800";
+                
+                // Tự động nhảy sang từ mới sau 1.5 giây chiến thắng
+                setTimeout(loadGameWord, 1500);
+            } else {
+                feedback.innerText = "❌ Chưa đúng rồi! Hãy thử suy nghĩ và sắp xếp lại nhé.";
+                feedback.className = "text-sm font-bold text-rose-600";
+                gInput.classList.add("border-rose-400", "bg-rose-50");
+                setTimeout(() => {
+                    gInput.classList.remove("border-rose-400", "bg-rose-50");
+                }, 500);
+            }
+        }
+
+        function skipGameWord() {
+            loadGameWord();
+        }
+
+        function skipGameWord() {
+            loadGameWord();
+        }
+    </script>
+</body>
+</html>
